@@ -1,1 +1,2 @@
-alert('Hello from Webpack');
+// eslint-disable-next-line no-console
+console.log('HELLO FROM WEBPACK');
