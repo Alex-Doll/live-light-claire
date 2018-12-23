@@ -3,9 +3,8 @@
 import compression from 'compression';
 import express from 'express';
 
-import { APP_NAME, STATIC_PATH, WEB_PORT, WDS_PORT } from '../shared/config';
+import { STATIC_PATH, WEB_PORT, WDS_PORT } from '../shared/config';
 import { isProd, scriptSource } from '../shared/util';
-import renderApp from './render-app';
 
 const app = express();
 
@@ -20,18 +19,23 @@ app.get('/', (req, res) => {
 });
 
 app.get('/about', (req, res) => {
+  res.render('index.ejs', { STATIC_PATH, WDS_PORT, scriptSource });
 });
 
 app.get('/services', (req, res) => {
+  res.render('index.ejs', { STATIC_PATH, WDS_PORT, scriptSource });
 });
 
 app.get('/events', (req, res) => {
+  res.render('index.ejs', { STATIC_PATH, WDS_PORT, scriptSource });
 });
 
 app.get('/scheduling', (req, res) => {
+  res.render('index.ejs', { STATIC_PATH, WDS_PORT, scriptSource });
 });
 
 app.get('/contact', (req, res) => {
+  res.render('index.ejs', { STATIC_PATH, WDS_PORT, scriptSource });
 });
 
 app.listen(WEB_PORT, () => {
