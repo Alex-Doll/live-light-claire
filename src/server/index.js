@@ -5,6 +5,7 @@ import express from 'express';
 
 import { STATIC_PATH, WEB_PORT, WDS_PORT } from '../shared/config';
 import { isProd, scriptSource } from '../shared/util';
+import renderView from './render-view';
 
 const app = express();
 
@@ -15,7 +16,7 @@ app.use(STATIC_PATH, express.static('dist'));
 app.use(STATIC_PATH, express.static('public'));
 
 app.get('/', (req, res) => {
-  res.render('home.ejs', { STATIC_PATH, WDS_PORT, scriptSource });
+  renderView(res, 'home');
 });
 
 app.get('/about', (req, res) => {
