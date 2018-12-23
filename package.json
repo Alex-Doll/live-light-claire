@@ -4,7 +4,7 @@
   "description": "A yoga reiki website for Claire Golubski",
   "main": "index.js",
   "scripts": {
-    "start": "babel-node src",
+    "start": "babel-node src/server",
     "test": "eslint src && flow && jest --coverage",
     "precommit": "npm test",
     "prepush": "npm test"
@@ -12,7 +12,9 @@
   "author": "Alex Doll",
   "license": "ISC",
   "dependencies": {
-    "babel-preset-env": "^1.7.0"
+    "babel-preset-env": "^1.7.0",
+    "compression": "^1.7.3",
+    "express": "^4.16.4"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
