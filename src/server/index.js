@@ -20,5 +20,5 @@ app.get('/', (req, res) => {
 
 app.listen(WEB_PORT, () => {
   // eslint-disable-next-line no-console
-  console.log(`Server running on port ${WEB_PORT} in ${isProd ? 'PRODUCTION' : 'DEVELOPMENT'} mode!`);
+  console.log(`Server running on port ${WEB_PORT} in ${isProd ? '(PRODUCTION)' : '(DEVELOPMENT)\nKeep "npm run-script dev:wds" running in another terminal'}`);
 });
