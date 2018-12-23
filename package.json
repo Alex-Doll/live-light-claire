@@ -4,7 +4,8 @@
   "description": "A yoga reiki website for Claire Golubski",
   "main": "index.js",
   "scripts": {
-    "start": "babel-node src/server",
+    "start": "npm run-script dev:start",
+    "dev:start": "nodemon --ignore lib --exec babel-node src/server",
     "test": "eslint src && flow && jest --coverage",
     "precommit": "npm test",
     "prepush": "npm test"
@@ -26,6 +27,7 @@
     "eslint-plugin-react": "^7.11.1",
     "flow-bin": "^0.89.0",
     "husky": "^1.2.1",
-    "jest": "^23.6.0"
+    "jest": "^23.6.0",
+    "nodemon": "^1.18.9"
   }
 }
