@@ -15,27 +15,27 @@ app.use(STATIC_PATH, express.static('dist'));
 app.use(STATIC_PATH, express.static('public'));
 
 app.get('/', (req, res) => {
-  res.render('index.ejs', { STATIC_PATH, WDS_PORT, scriptSource });
+  res.render('home.ejs', { STATIC_PATH, WDS_PORT, scriptSource });
 });
 
 app.get('/about', (req, res) => {
-  res.render('index.ejs', { STATIC_PATH, WDS_PORT, scriptSource });
+  res.render('about.ejs', { STATIC_PATH, WDS_PORT, scriptSource });
 });
 
 app.get('/services', (req, res) => {
-  res.render('index.ejs', { STATIC_PATH, WDS_PORT, scriptSource });
+  res.render('services.ejs', { STATIC_PATH, WDS_PORT, scriptSource });
 });
 
 app.get('/events', (req, res) => {
-  res.render('index.ejs', { STATIC_PATH, WDS_PORT, scriptSource });
+  res.render('events.ejs', { STATIC_PATH, WDS_PORT, scriptSource });
 });
 
 app.get('/scheduling', (req, res) => {
-  res.render('index.ejs', { STATIC_PATH, WDS_PORT, scriptSource });
+  res.render('scheduling.ejs', { STATIC_PATH, WDS_PORT, scriptSource });
 });
 
 app.get('/contact', (req, res) => {
-  res.render('index.ejs', { STATIC_PATH, WDS_PORT, scriptSource });
+  res.render('contact.ejs', { STATIC_PATH, WDS_PORT, scriptSource });
 });
 
 app.listen(WEB_PORT, () => {
