@@ -7,7 +7,7 @@ import Events from './events';
 import Scheduling from './scheduling';
 import Contact from './contact';
 
-function runScript(page) {
+function runScript(page: string): null {
   switch(page) {
   case '/':
     Home();
@@ -31,6 +31,8 @@ function runScript(page) {
     // eslint-disable-next-line no-console
     console.log('Page Not Found');
   }
+
+  return null;
 }
 
 window.onload = runScript(window.location.pathname);

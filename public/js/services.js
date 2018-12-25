@@ -1,6 +1,6 @@
 // @flow
 
-function Services() {
+function Services(): null {
   // eslint-disable-next-line no-console
   console.log('Hello from services!');
 

@@ -1,6 +1,6 @@
 // @flow
 
-function Events() {
+function Events(): null {
   // eslint-disable-next-line no-console
   console.log('Hello from events!');
 

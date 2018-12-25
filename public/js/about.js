@@ -1,6 +1,6 @@
 // @flow
 
-function About() {
+function About(): null {
   // eslint-disable-next-line no-console
   console.log('Hello from about!');
 

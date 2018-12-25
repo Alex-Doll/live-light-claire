@@ -1,6 +1,6 @@
 // @flow
 
-function Contact() {
+function Contact(): null {
   // eslint-disable-next-line no-console
   console.log('Hello from contact!');
 

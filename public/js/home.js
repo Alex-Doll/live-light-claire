@@ -1,6 +1,6 @@
 // @flow
 
-function Home() {
+function Home(): null {
   // eslint-disable-next-line no-console
   console.log('Hello from home!');
 
