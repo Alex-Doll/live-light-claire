@@ -7,30 +7,28 @@ import Events from './events';
 import Scheduling from './scheduling';
 import Contact from './contact';
 
-function runScript(page: string): null {
+export function runScript(page: string): function {
   switch(page) {
   case '/':
-    Home();
-    break;
+    return Home;
   case '/about':
-    About();
-    break;
+    return About;
   case '/services':
-    Services();
-    break;
+    return Services;
   case '/events':
-    Events();
-    break;
+    return Events;
   case '/scheduling':
-    Scheduling();
-    break;
+    return Scheduling;
   case '/contact':
-    Contact();
-    break;
-  default:
-    // eslint-disable-next-line no-console
-    console.log('Page Not Found');
+    return Contact;
+    default:
+      return scriptNotFound;
   }
+}
+
+export function scriptNotFound(): null {
+  // eslint-disable-next-line no-console
+  console.log('Page Not Found');
 
   return null;
 }
