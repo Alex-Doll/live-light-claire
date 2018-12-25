@@ -7,7 +7,7 @@ import { isProd } from './src/shared/util';
 
 export default {
   entry: [
-    './src/client',
+    './public/js',
   ],
   output: {
     filename: 'js/bundle.js',
