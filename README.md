@@ -6,7 +6,7 @@ Contributing
 --------------
 
 ### Dev Environment Setup
-1. Clone the repository using the link above
+1. Clone the repository using the "Clone or download" link above
 ```
 git clone [link]
 ```
@@ -26,4 +26,4 @@ npm start
 ```
 npm run-script dev:wds
 ```
-6. Navigate to the application in your web browser! [Localhost](http://localhost:8000/)
+6. Navigate to the application in your web browser! [Localhost:8000](http://localhost:8000/)
