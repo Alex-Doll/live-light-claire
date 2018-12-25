@@ -6,33 +6,50 @@ import Events from './events';
 import Scheduling from './scheduling';
 import Contact from './contact';
 
-test('Root route returns Home script', () => {
-  expect(runScript('/')).toBe(Home);
+const routesToTest = [
+  {
+    name: 'Home',
+    route: '/',
+    routeScript: Home,
+  },
+  {
+    name: 'About',
+    route: '/about',
+    routeScript: About,
+  },
+  {
+    name: 'Services',
+    route: '/services',
+    routeScript: Services,
+  },
+  {
+    name: 'Events',
+    route: '/events',
+    routeScript: Events,
+  },
+  {
+    name: 'Scheduling',
+    route: '/scheduling',
+    routeScript: Scheduling,
+  },
+  {
+    name: 'Contact',
+    route: '/contact',
+    routeScript: Contact,
+  },
+  {
+    name: 'Unknown',
+    route: '/unknown',
+    routeScript: scriptNotFound,
+  },
+];
+
+routesToTest.forEach(({ name, route, routeScript }, index) => {
+  test(`${name} route returns ${name} script`, () => {
+    expect(runScript(route)).toBe(routeScript);
+  });
 });
 
-test('About route returns About script', () => {
-  expect(runScript('/about')).toBe(About);
-});
-
-test('Services route returns Services script', () => {
-  expect(runScript('/services')).toBe(Services);
-});
-
-test('Events route returns Events script', () => {
-  expect(runScript('/events')).toBe(Events);
-});
-
-test('Scheduling route returns Scheduling script', () => {
-  expect(runScript('/scheduling')).toBe(Scheduling);
-});
-
-test('Contact route returns Contact script', () => {
-  expect(runScript('/contact')).toBe(Contact);
-});
-
-test('Unknown route should return console.log', () => {
-  expect(runScript('unknownRoute')).toBe(scriptNotFound);
-});
 
 test('Function should return null', () => {
   expect(scriptNotFound()).toBe(null);
