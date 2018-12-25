@@ -51,5 +51,5 @@ NOTE: Everytime you push your code the script "npm test" will run and the push w
 ```
 git push
 ```
-8. Go to your branch on the repository's GitHub page and open a new pull request to the master branch!
+8. Go to your branch on the repository's GitHub page and open a new pull request to the master branch! (Make sure to add me, Rosco1010, as a reviewer)
 9. Give yourself a round of applause!
